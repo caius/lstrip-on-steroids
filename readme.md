@@ -6,6 +6,16 @@ In [another][engorge] late night discussion in the [#nwrug][] IRC room, [Ashley 
 [#nwrug]: http://nwrug.org/
 [AM]: http://www.patchspace.co.uk/
 
+## Installation
+
+	$ sudo gem install lstrip-on-steroids
+
+And then in your code:
+
+	require "lstrip_on_steroids"
+
+## Examples & Usage
+
 For example, the following story reads ok, but you end up with extra whitespace at the start of each line:
 
 	Scenario: Fake thing happens
