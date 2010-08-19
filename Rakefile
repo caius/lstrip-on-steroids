@@ -2,7 +2,7 @@ require "rake/gempackagetask"
 
 spec = Gem::Specification.new do |s| 
   s.name = "lstrip-on-steroids"
-  s.version = "0.1"
+  s.version = "0.9"
   s.author = "Caius Durling"
   s.email = "dev@caius.name"
   s.homepage = "http://github.com/caius/lstrip-on-steroids"
