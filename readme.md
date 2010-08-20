@@ -6,6 +6,10 @@ In [another][engorge] late night discussion in the [#nwrug][] IRC room, [Ashley 
 [#nwrug]: http://nwrug.org/
 [AM]: http://www.patchspace.co.uk/
 
+As of v0.9.5 you can use either Strings (`''`, `""`, `%{}`, etc) or HEREDOCs (`<<-EOF\nEOF`) with the leading `-` to have the shitespace stripped. *('Shitespace' was coined by Caius in [this tweet][shitespace].)*
+
+[shitespace]: https://twitter.com/Caius/status/21600277885
+
 ## Installation
 
 	$ sudo gem install lstrip-on-steroids
@@ -16,7 +20,7 @@ And then in your code:
 
 ## Examples & Usage
 
-For example, the following story reads ok, but you end up with extra whitespace at the start of each line:
+For example, the following story reads ok, but you end up with extra shitespace at the start of each line:
 
 	Scenario: Fake thing happens
 	  When I do something
@@ -40,9 +44,9 @@ The current solution is to delete the indent in the string:
 
 But that just looks horrible, and you've amended your story to fit the code (kinda.)
 
-Luckily, the last line contains just the amount of whitespace you want to be removed from each line, so with a bit of jiggery pokery, you can have your cake and eat it too. (The cake is not a lie.)
+Luckily, you can automatically work out just the right amount of whitespace you want to be removed from each line, so with a bit of jiggery pokery, you can have your cake and eat it too. (The cake is not a lie.)
 
-Seeing as `String#-@` isn't defined already, this gem defines that for it, so you just prepend your multiline string with `-` to have it automagically strip the indents and leave the rest of your shitespace a-ok. So you end up with:
+Seeing as `String#-@` isn't defined already, this gem defines that for it, so you just prepend your multiline string with `-` to have it automagically strip the shitespace and leave the rest of your whitespace a-ok. So you end up with:
 
 	Scenario: Fake thing happens
 	  When I do something
