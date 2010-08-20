@@ -68,6 +68,7 @@ which gives you back `"  someone\n  did\n  something"`, exactly what we want!
 > The MIT License
 > 
 > Copyright (c) 2010 Caius Durling <dev@caius.name>
+> Contributions by Ashley Moran <ashley.moran@patchspace.co.uk>
 > 
 > Permission is hereby granted, free of charge, to any person obtaining a copy
 > of this software and associated documentation files (the "Software"), to deal
