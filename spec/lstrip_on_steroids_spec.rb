@@ -33,5 +33,15 @@ describe String do
       
       string.should == "foo\n          bar\nbaz"  
     end
+    
+    it "works with heredoc strings" do
+      string = -<<-end
+        foo
+          bar
+        baz
+      end
+      
+      string.should == "foo\n  bar\nbaz"
+    end
   end
 end
