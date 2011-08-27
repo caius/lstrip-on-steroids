@@ -8,7 +8,7 @@ spec = Gem::Specification.new do |s|
   s.homepage = "http://github.com/caius/lstrip-on-steroids"
   s.platform = Gem::Platform::RUBY
   s.summary = "Intelligently strips leading whitespace from a multiline string"
-  s.files = FileList["lib/**/*.rb", "[A-Z]*"].to_a
+  s.files = FileList["lib/**/*.rb", "spec/**/*.rb", "[A-Z]*"].to_a
   s.has_rdoc = false
 end
  
