@@ -60,7 +60,7 @@ Seeing as `String#-@` isn't defined already, this gem defines that for it, so yo
 
 which gives you back `"  someone\n  did\n  something"`, exactly what we want!
 
-*If you're not used to see `%{}` used to create strings, check out the [Ruby Shortcuts][rs] post on [CaiusTheory][ct] for an explanation of it and more!*
+*If you've not used to see `%{}` used to create strings, check out the [Ruby Shortcuts][rs] post on [CaiusTheory][ct] for an explanation of it and more!*
 
 [rs]: http://caiustheory.com/ruby-shortcuts
 [ct]: http://caiustheory.com/
@@ -69,7 +69,7 @@ which gives you back `"  someone\n  did\n  something"`, exactly what we want!
 
 > The MIT License
 > 
-> Copyright (c) 2010 Caius Durling <dev@caius.name>
+> Copyright (c) 2010 Caius Durling <dev@caius.name>  
 > Contributions by Ash Moran <ash.moran@patchspace.co.uk>
 > 
 > Permission is hereby granted, free of charge, to any person obtaining a copy
