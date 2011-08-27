@@ -6,17 +6,18 @@ module LStripOnSteroids
     end
     
     def strip
-      @lines.map {|line| line.sub(/^ {#{whitespace_trim_length}}/, "") }
+      @lines.map {|line| line.sub(/^\s*$/, "").sub(/^ {#{whitespace_trim_length}}/, "") }
     end
     
     private
     
     def whitespace_trim_length
-      @whitespace_trim_length ||= @lines.map {|line| indent_size(line) }.min
+      @whitespace_trim_length ||=
+        @lines.reject { |line| line =~ /^\s*$/ }.map { |line| indent_size(line) }.min
     end
     
     def strip_bare_top_and_bottom
-      [0, -1].each {|i| @lines.delete_at(i) if bare?(@lines[i]) }
+      [0, -1].each { |i| @lines.delete_at(i) if bare?(@lines[i]) }
     end
     
     def indent_size line
@@ -29,7 +30,7 @@ module LStripOnSteroids
   end
   
   def -@
-    JuicedStripper.new(split("\n")).strip.join("\n")
+    JuicedStripper.new(split("\n")).strip.join("\n").sub(/\n*\Z/, "")
   end
 end
 

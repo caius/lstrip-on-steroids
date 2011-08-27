@@ -1,10 +1,10 @@
 # lstrip-on-steroids
 
-In [another][engorge] late night discussion in the [#nwrug][] IRC room, [Ashley Moran][AM] was after sane indent-aware multiline strings for his cucumber scenario's.
+In [another][engorge] late night discussion in the [#nwrug][] IRC room, [Ash Moran][AM] was after sane indent-aware multiline strings for his cucumber scenarios.
 
 [engorge]: http://github.com/caius/engorge-ostruct
 [#nwrug]: http://nwrug.org/
-[AM]: http://www.patchspace.co.uk/
+[AM]: https://github.com/ashmoran/
 
 As of v0.9.5 you can use either Strings (`''`, `""`, `%{}`, etc) or HEREDOCs (`<<-EOF\nEOF`) with the leading `-` to have the shitespace stripped. *('Shitespace' was coined by Caius in [this tweet][shitespace].)*
 
@@ -16,9 +16,11 @@ As of v0.9.5 you can use either Strings (`''`, `""`, `%{}`, etc) or HEREDOCs (`<
 
 And then in your code:
 
-	require "lstrip_on_steroids"
+	require "lstrip-on-steroids"
 
 ## Examples & Usage
+
+Actually, I think my original scenario was RSpec :-) /Ash
 
 For example, the following story reads ok, but you end up with extra shitespace at the start of each line:
 
@@ -68,7 +70,7 @@ which gives you back `"  someone\n  did\n  something"`, exactly what we want!
 > The MIT License
 > 
 > Copyright (c) 2010 Caius Durling <dev@caius.name>
-> Contributions by Ashley Moran <ashley.moran@patchspace.co.uk>
+> Contributions by Ash Moran <ash.moran@patchspace.co.uk>
 > 
 > Permission is hereby granted, free of charge, to any person obtaining a copy
 > of this software and associated documentation files (the "Software"), to deal
