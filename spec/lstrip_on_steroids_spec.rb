@@ -2,6 +2,14 @@ require File.join(File.dirname(__FILE__), "..", "lib", "lstrip_on_steroids")
 
 describe String do
   describe "#-@" do
+    it "doesn't alter an empty string" do
+      (-"").should eq ""
+    end
+
+    it "removes whitespace from a single line" do
+      (-" foo").should eq "foo"
+    end
+
     it "removes whitespace" do
       string = -%{
         foo

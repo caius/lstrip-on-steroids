@@ -17,7 +17,7 @@ module LStripOnSteroids
     end
     
     def strip_bare_top_and_bottom
-      [0, -1].each { |i| @lines.delete_at(i) if bare?(@lines[i]) }
+      [0, -1].each { |i| @lines.delete_at(i) if @lines[i] && bare?(@lines[i]) }
     end
     
     def indent_size line
