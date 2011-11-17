@@ -1,3 +1,5 @@
+require File.expand_path("lstrip_on_steroids/version", File.dirname(__FILE__))
+
 module LStripOnSteroids
   class JuicedStripper
     def initialize lines
