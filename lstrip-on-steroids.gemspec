@@ -15,4 +15,7 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = LStripOnSteroids::VERSION
   gem.has_rdoc      = false
+
+  gem.add_development_dependency "rspec"
+  gem.add_development_dependency "rake"
 end
